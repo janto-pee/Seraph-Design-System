@@ -1,7 +1,5 @@
 # Seraph-Design-System
 
-Important Note: This style guide is currently very WIP
-
 ---
 
 ## What is this style guide? 
