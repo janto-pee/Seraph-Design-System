@@ -1,5 +1,5 @@
 {
-  "name": "Seraph-Design-System",
+  "name": "Spd.e",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/janto-pee/Seraph-Design-System.git",
@@ -7,5 +7,12 @@
   "license": "MIT",
   "dependencies": {
     "normalize-scss": "^7.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "stylelint": "^14.14.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-prettier": "^2.0.0"
   }
 }
