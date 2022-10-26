@@ -1,0 +1,23 @@
+{
+  "name": "@seraph-design-system/packages",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/janto-pee/Seraph-Design-System.git",
+  "author": "Ayobami Adejumo <ayobami_adejumo@yahoo.com>",
+  "license": "MIT",
+  "private": "true",
+  "devDependencies": {
+    "lerna": "^6.0.1"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/normalize-scss"
+    ]
+  },
+  "scripts": {
+    "dev": "yarn lerna run dev"
+  }
+}

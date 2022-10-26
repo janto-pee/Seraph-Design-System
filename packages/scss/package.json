@@ -1,10 +1,11 @@
 {
-  "name": "Spd.e",
+  "name": "@seraph-design-system/scss",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/janto-pee/Seraph-Design-System.git",
   "author": "Ayobami Adejumo <ayobami_adejumo@yahoo.com>",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
     "normalize-scss": "^7.0.1"
   },
@@ -12,6 +13,7 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
+    "sass": "^1.55.0",
     "stylelint": "^14.14.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-sass-guidelines": "^9.0.1",
@@ -19,7 +21,8 @@
   },
   "scripts": {
     "lint": "stylelint \"./**/*.scss\"",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "dev": "node src/script/index.js"
   },
   "husky": {
     "hooks": {
