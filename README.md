@@ -1,10 +1,10 @@
 # Seraph Design System Style Guide
 
-Important Note: This style guide is currently WIP
+Seraph UI components library encompasses over 40 high-performance, modular, and responsive UI components built for performance. 
 
 ---
-
-## What is this style guide?
+<!-- 
+## What is Seraph Design System?
 
 This style guide documents the standards for building and maintaining design systems we follow at Seraph along with explaining the reasoning for our decisions and tooling.
 
@@ -13,7 +13,7 @@ This style guide is intended to be a living representation of how Seraph works w
 ## Who is this style-guide for?
 
 This style-guide is intended to be opinionated, and focused on the kinds of work that Seraph does. Many decision inherently have trade-offs and the trade-offs made in this style-guide might not be the right ones for every company. We document these decisions fastidiously, and encourage you to use the bits that make sense for you.
-
+ -->
 ## Concepts
 
 > What is a design system? Purpose, Goals, Reasoning.
@@ -66,14 +66,6 @@ This style-guide is intended to be opinionated, and focused on the kinds of work
 - Switches
 
 > Props that can change the appearance and/or behaviour of a component. Often selected from a set of possible values. Examples include appearance or color of a button, first day of the week in a calendar, etc.
-
-# Design Tokens
-
-## Global Tokens
-
-## Packs
-
-# Theming
 
 # Components
 
