@@ -1,10 +1,10 @@
 # Seraph Design System Style Guide
 
-Important Note: This style guide is currently WIP
+Seraph UI components library encompasses over 40 high-performance, modular, and responsive UI components built for performance. 
 
 ---
-
-## What is this style guide?
+<!-- 
+## What is Seraph Design System?
 
 This style guide documents the standards for building and maintaining design systems we follow at Seraph along with explaining the reasoning for our decisions and tooling.
 
@@ -13,18 +13,28 @@ This style guide is intended to be a living representation of how Seraph works w
 ## Who is this style-guide for?
 
 This style-guide is intended to be opinionated, and focused on the kinds of work that Seraph does. Many decision inherently have trade-offs and the trade-offs made in this style-guide might not be the right ones for every company. We document these decisions fastidiously, and encourage you to use the bits that make sense for you.
-
+ -->
 ## Concepts
 
-> What is a design system? Purpose, Goals, Reasoning.
+> What is seraph design system? Purpose, Goals, Reasoning.
 
-"A Design System is an artefact of the culture and collaboration in your company" -- Dom
+Seraph design system is built on the atomic design principle presented by Brad Frost.
 
-> Need to either cover or link out to methodolgy here, see [Dom's first notes on this](https://github.com/Seraph/design-system/blob/master/org.md)
+> Each of the components are grouped into four distinct stages of the atomic priniciple - Atoms, Molecules, Organisms, Templates and Pages
 
 ### Terminology
 
-(all wip and in need of further discussion)
+- Atoms
+
+> Seraph components such as Buttons, inputs, labels and other basic elements that are used throughout the design fall into this category. They are simple elements that cannot be broken down into smaller functional pieces 
+
+- Molecules
+
+> Seraph components such as search form that are a combination of two or more atoms such as input atom and button atom fall into these category. Thus, in this category, two or more atoms are brought together to form a functional group
+
+- Organisms
+
+> Organisms are relatively larger UI components composed of groups of molecules and/or atoms and/or other organisms. These organisms form distinct sections of an interface. seraph profile card falls in this category
 
 - Design Language
 
@@ -66,14 +76,6 @@ This style-guide is intended to be opinionated, and focused on the kinds of work
 - Switches
 
 > Props that can change the appearance and/or behaviour of a component. Often selected from a set of possible values. Examples include appearance or color of a button, first day of the week in a calendar, etc.
-
-# Design Tokens
-
-## Global Tokens
-
-## Packs
-
-# Theming
 
 # Components
 
