@@ -1,16 +1,18 @@
-# Seraph-Design-System
+# Seraph Design System Style Guide
+
+Important Note: This style guide is currently WIP
 
 ---
 
-## What is this style guide? 
+## What is this style guide?
 
-This style guide documents the standards for building and maintaining design systems we follow at Thinkmill along with explaining the reasoning for our decisions and tooling.
+This style guide documents the standards for building and maintaining design systems we follow at Seraph along with explaining the reasoning for our decisions and tooling.
 
-This style guide is intended to be a living representation of how Thinkmill works with design systems. Over time, the recommendations will change as our tools and workflows evolve. While the guide is designed holistically, the tools and decisions in this guide can be used independently of each other.
+This style guide is intended to be a living representation of how Seraph works with design systems. Over time, the recommendations will change as our tools and workflows evolve. While the guide is designed holistically, the tools and decisions in this guide can be used independently of each other.
 
-## Who is this style-guide for? 
+## Who is this style-guide for?
 
-This style-guide is intended to be opinionated, and focused on the kinds of work that Thinkmill does. Many decision inherently have trade-offs and the trade-offs made in this style-guide might not be the right ones for every company. We document these decisions fastidiously, and encourage you to use the bits that make sense for you.
+This style-guide is intended to be opinionated, and focused on the kinds of work that Seraph does. Many decision inherently have trade-offs and the trade-offs made in this style-guide might not be the right ones for every company. We document these decisions fastidiously, and encourage you to use the bits that make sense for you.
 
 ## Concepts
 
@@ -18,7 +20,7 @@ This style-guide is intended to be opinionated, and focused on the kinds of work
 
 "A Design System is an artefact of the culture and collaboration in your company" -- Dom
 
-> Need to either cover or link out to methodolgy here, see [Dom's first notes on this](https://github.com/Thinkmill/design-system/blob/master/org.md)
+> Need to either cover or link out to methodolgy here, see [Dom's first notes on this](https://github.com/Seraph/design-system/blob/master/org.md)
 
 ### Terminology
 
@@ -123,8 +125,8 @@ Specify styles in a function that is invoked with the current state of the compo
 
 ```js
 const getButtonStyles = ({ isPressed, tokens }) => ({
-  background: isPressed ? 'blue' : 'white',
-  text: !isPressed ? 'blue' : 'white',
+  background: isPressed ? "blue" : "white",
+  text: !isPressed ? "blue" : "white",
 });
 
 export const Button = ({ children, ...props }) => {
@@ -155,17 +157,15 @@ Emotion gives us several benefits over other approaches:
 ## Accessibility
 
 > Resources for best practices around accessibility
-https://www.wuhcag.com/wcag-checklist/
-https://inclusive-components.design/
-https://www.udacity.com/course/web-accessibility--ud891
-https://a11yproject.com
+> https://www.wuhcag.com/wcag-checklist/ > https://inclusive-components.design/ > https://www.udacity.com/course/web-accessibility--ud891 > https://a11yproject.com
 
 > Dom to provide (?)
 
 ## Composition
 
 ### Props
-> reflected attributes as props 
+
+> reflected attributes as props
 > props best practices
 
 ### Types of Components
@@ -196,9 +196,9 @@ Wrap components to add features, rather than blowing out the complexity of your 
 For example, if your basic button takes an `isPressed` prop, and you want to add a toggle button to your design system, you can achieve the effect by creating a wrapping component that manages the toggle state:
 
 ```js
-const ToggleButton = props => {
+const ToggleButton = (props) => {
   const [toggled, setToggled] = useState(false);
-  const handleClick = e => {
+  const handleClick = (e) => {
     props.onToggle && props.onToggle(e, !toggled);
     setToggled(!toggled);
   };
@@ -246,99 +246,120 @@ Components exist in a hierarchy. Capture the context of where events are called 
 
 # Publishing and Versioning
 
-> See [monorepo style guide](https://github.com/Thinkmill/monorepo)
+> See [monorepo style guide](https://github.com/Seraph/monorepo)
 
 # Observability
+
 > The yardstick of how understandable a system is tends to be how observable it is. - Cindy Sridharan
 
-The longevity of a design system is hinged on how understandable it is. 
-As such, building tools and creating processes to make our design systems more understandable is incredibly important. 
+The longevity of a design system is hinged on how understandable it is.
+As such, building tools and creating processes to make our design systems more understandable is incredibly important.
 
-Tools like kaelig's 'Splash' are a good example of this. 
+Tools like kaelig's 'Splash' are a good example of this.
+
 > See https://twitter.com/kaelig/status/1172579203893456896
 
 # Documentation
 
 > [monorepo style guide](#)
 
-# Definition of Done 
+# Definition of Done
 
 > We should recommend (some derividation of) Emma Wedekind's Component Checklist here.
 > https://twitter.com/EmmaWedekind/status/1177248937763311617?s=20
 
 ## Design
 
-### Accessibility 
-- Accessible color palette 
-- Keyboard interactions designed up front 
-- Typescale is readable and appropriate 
+### Accessibility
 
-### Interaction 
-- Clearly outlined specification for user interactions and / or user input. 
+- Accessible color palette
+- Keyboard interactions designed up front
+- Typescale is readable and appropriate
 
-### Context 
-- How and why the component should be used is clearly defined. 
+### Interaction
 
-### State 
-- The different states the component can be in are clearly defined and designed. 
+- Clearly outlined specification for user interactions and / or user input.
 
-### Content 
+### Context
+
+- How and why the component should be used is clearly defined.
+
+### State
+
+- The different states the component can be in are clearly defined and designed.
+
+### Content
+
 - Defined guideliens around content for and with the component.
 
-### Customisation 
-- `The component has defined aspects which are custommizable. If applicable, as well as the corresponding values.` - Emma Wedekind  
+### Customisation
+
+- `The component has defined aspects which are custommizable. If applicable, as well as the corresponding values.` - Emma Wedekind
 
 ### Responsiveness
-- How the component scales across varying viewport sizes and screen resolutions is clearly defined. 
+
+- How the component scales across varying viewport sizes and screen resolutions is clearly defined.
 - How the component scales within a grid.
 
-## Engineering 
+## Engineering
 
 ### Accessibility
-- Components are AA compliant 
+
+- Components are AA compliant
 
 ### Responsiveness
-- The component responds gracefully to different viewport sizes. 
+
+- The component responds gracefully to different viewport sizes.
 - The component responds gracefully to changes within a grid.
 
-### State 
-- This component includes all of the neutral, hover, focus and disabled states as defined in design. 
+### State
 
-### Customization 
+- This component includes all of the neutral, hover, focus and disabled states as defined in design.
+
+### Customization
+
 - Component has clear patterns for customisations, as per design. (see overrides)
 
-### Error Handling 
+### Error Handling
+
 - This component handles errors gracefully
- 
-### Browser Compatibility 
-- IE11+ 
-- Polyfills provided for newer technologies. 
 
-### Testing: 
+### Browser Compatibility
+
+- IE11+
+- Polyfills provided for newer technologies.
+
+### Testing:
+
 - Unit tests
-- Integration tests 
-- Cross browser tests. 
+- Integration tests
+- Cross browser tests.
 
-## Documentation 
+## Documentation
 
-### Properties 
-- The props of the component and its exported subcomponents are clearly defined and described. 
+### Properties
 
-### Interactive Examples 
-- Common and best patterns for usage are clearly defined and illustrated with examples. 
+- The props of the component and its exported subcomponents are clearly defined and described.
 
-### Code snippets 
-- Interactive examples should be accompanied by code snippets 
+### Interactive Examples
 
-### Context Definition 
-- When, where, how to use the component. 
-- Related components 
+- Common and best patterns for usage are clearly defined and illustrated with examples.
+
+### Code snippets
+
+- Interactive examples should be accompanied by code snippets
+
+### Context Definition
+
+- When, where, how to use the component.
+- Related components
 
 ### Wireframe view of component
-> Dan to add more about this 
 
+> Dan to add more about this
 
 # Development
+
 >
 
 # Testing
