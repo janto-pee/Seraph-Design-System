@@ -1,9 +1,10 @@
 # Seraph Design System Style Guide
 
-Seraph UI components library encompasses over 40 high-performance, modular, and responsive UI components built for performance. 
+Seraph UI components library encompasses over 40 high-performance, modular, and responsive UI components built for performance.
 
 ---
-<!-- 
+
+<!--
 ## What is Seraph Design System?
 
 This style guide documents the standards for building and maintaining design systems we follow at Seraph along with explaining the reasoning for our decisions and tooling.
@@ -14,6 +15,7 @@ This style guide is intended to be a living representation of how Seraph works w
 
 This style-guide is intended to be opinionated, and focused on the kinds of work that Seraph does. Many decision inherently have trade-offs and the trade-offs made in this style-guide might not be the right ones for every company. We document these decisions fastidiously, and encourage you to use the bits that make sense for you.
  -->
+
 ## Concepts
 
 > What is seraph design system? Purpose, Goals, Reasoning.
@@ -26,7 +28,7 @@ Seraph design system is built on the atomic design principle presented by Brad F
 
 - Atoms
 
-> Seraph components such as Buttons, inputs, labels and other basic elements that are used throughout the design fall into this category. They are simple elements that cannot be broken down into smaller functional pieces 
+> Seraph components such as Buttons, inputs, labels and other basic elements that are used throughout the design fall into this category. They are simple elements that cannot be broken down into smaller functional pieces
 
 - Molecules
 

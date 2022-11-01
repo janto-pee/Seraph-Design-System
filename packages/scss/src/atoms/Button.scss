@@ -1,0 +1,7 @@
+@import "../foundation/all";
+
+.shde-button-style {
+  background: $blue;
+  color: $white;
+  padding: map-get($spacing, "sm");
+}

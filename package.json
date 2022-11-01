@@ -10,6 +10,12 @@
     "packages": [
       "packages/**",
       "playground/**"
+    ],
+    "nohoist": [
+      "**/normalize-scss"
     ]
+  },
+  "devDependencies": {
+    "lerna": "^6.0.1"
   }
 }
