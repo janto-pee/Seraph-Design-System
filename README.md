@@ -150,6 +150,7 @@ bg-danger represent disapproval.
 Button component has a different types depending on intended action. type could be reset or submit.
 
 type-reset returns to an initial state.
+
 type-submit for submittion.
 
 ```
@@ -159,21 +160,31 @@ type-submit for submittion.
 Button component could be rounded, flat or a simple link
 
 btn-round returns to an initial state.
+
 btn-flat for submittion.
+
 btn-link for submittion.
 
 ### Alert Message
 
 ```
-<AlertMessage icon={aitimes} alert="danger" message="Error 404, the web page you requested is not found" >
+<AlertMessage
+              icon={aitimes}
+              alert="danger"
+              message="Error 404, the web page you requested is not found"
+/>
 ```
 
 Alert Message component has a list of predefined styles that can be defined using varius css properties.
 
 alert-primary to display a basic message.
+
 alert-success represent a positive feedback.
+
 alert-info present an information.
+
 alert-warning Used to show caution.
+
 alert-danger represent disapproved result.
 
 ```
@@ -188,6 +199,7 @@ alert-danger represent disapproved result.
 Alert component has different classes depending on severity and variant. variant could be filled, outlined or text.
 
 class-filled has a deeper tone.
+
 class-outlined has a light tone.
 
 ## Design
