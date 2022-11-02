@@ -18,25 +18,25 @@ This style-guide is intended to be opinionated, and focused on the kinds of work
 
 ## Concepts
 
-> What is seraph design system? Purpose, Goals, Reasoning.
+<!-- > What is seraph design system? Purpose, Goals, Reasoning. -->
 
 Seraph design system is built on the atomic design principle presented by Brad Frost.
 
-> Each of the components are grouped into four distinct stages of the atomic priniciple - Atoms, Molecules, Organisms, Templates and Pages
+> Each of the components are grouped into five distinct categories of the atomic priniciple - Atoms, Molecules, Organisms, Templates and Pages
 
 ### Terminology
 
 - Atoms
 
-> Seraph components such as Buttons, inputs, labels and other basic elements that are used throughout the design fall into this category. They are simple elements that cannot be broken down into smaller functional pieces
+> Seraph components such as Buttons, inputs, labels and other basic elements fall into this category. They are simple elements that cannot be broken down into smaller functional pieces
 
 - Molecules
 
-> Seraph components such as search form that are a combination of two or more atoms such as input atom and button atom fall into these category. Thus, in this category, two or more atoms are brought together to form a functional group
+> Components such as search form that are a combination of two or more atoms fall into these category. Thus, in this category, two or more atoms are brought together to form a functional group
 
 - Organisms
 
-> Organisms are relatively larger UI components composed of groups of molecules and/or atoms and/or other organisms. These organisms form distinct sections of an interface. seraph profile card falls in this category
+> Organisms are relatively larger UI components composed of groups of molecules and/or atoms and/or other organisms. These organisms form distinct sections of an interface. an example is seraph profile card
 
 - Design Language
 
@@ -46,17 +46,17 @@ Seraph design system is built on the atomic design principle presented by Brad F
 
 > The composition of components, patterns and processes that is consumable, documented, published to be able to be reusable and scalable in a business domain
 
-- Design Tokens
+<!-- - Design Tokens
 
-> Implementation agnostic variables that describe the subset of values core to a design system.
+> Implementation agnostic variables that describe the subset of values core to a design system. -->
 
 - Theme
 
 > A customisable subset of design decisions that expresses sweeping style changes through the system.
 
-- Packs
+<!-- - Packs
 
-> A cluster of design tokens grouped according to how they should be used. See [Packs](#Packs)
+> A cluster of design tokens grouped according to how they should be used. See [Packs](#Packs) -->
 
 - Packages
 
@@ -65,25 +65,26 @@ Seraph design system is built on the atomic design principle presented by Brad F
 - Components
 
 > Components encapsulate functionality that renders a `view` with `styles` based on a `state`.
-> See [Components](#Components)
 
-- State
+<!-- > See [Components](#Components) -->
+
+<!-- - State
 
 > The combination of component that affect the appearance or behaviour of the
+ -->
+<!-- - Controllable State
 
-- Controllable State
+> This is an important concept regarding how state can be optionally provided to a component, along with a callback that is invoked when the state should change. The fallback behaviour is for the component to manage the state and default callback behaviour internally. -->
 
-> This is an important concept regarding how state can be optionally provided to a component, along with a callback that is invoked when the state should change. The fallback behaviour is for the component to manage the state and default callback behaviour internally.
+<!-- - Switches
 
-- Switches
-
-> Props that can change the appearance and/or behaviour of a component. Often selected from a set of possible values. Examples include appearance or color of a button, first day of the week in a calendar, etc.
+> Props that can change the appearance and/or behaviour of a component. Often selected from a set of possible values. Examples include appearance or color of a button, first day of the week in a calendar, etc. -->
 
 # Components
 
-> NOTE: Here we describe developing React components for a design system. The principles are largely translatable to React Native projects as well, but other frameworks and technologies are out of scope for our style guide at this time.
+<!-- > NOTE: Here we describe developing React components for a design system. The principles are largely translatable to React Native projects as well, but other frameworks and technologies are out of scope for our style guide at this time.
 
-> TODO: Review [React Patterns](https://reactpatterns.com) for inspiration - this does a good job of presenting various technical approaches you can take in React, and we can learn from the way it is organised and presented!
+> TODO: Review [React Patterns](https://reactpatterns.com) for inspiration - this does a good job of presenting various technical approaches you can take in React, and we can learn from the way it is organised and presented! -->
 
 Components encapsulate functionality that renders a `view` with `styles` based on a `state`.
 
@@ -96,16 +97,33 @@ We also recognise functional building blocks and controllers that are used by co
 > TODO: this needs to go hand-in-hand with some more depth around how documentation and examples are developed and published to make sense.
 
 ```
-- docs/
-- examples/
-- src/
-  - index.js
-  - styles.js
+- node_modules/
+- packages/
+  - react
+    - lib/
+    - node_modules/
+    - src/
+    - package.json
+    - rollup.config.js
+    - tsconfig.json
+  - scss
+    - lib/
+    - node_modules/
+    - src/
+    - package.json
+    - .stylelintrc.json
+    - gulpfile.js
+  - vue
+- playground/
+  - react
+  - vue
 - tests/
 - package.json
+- lerna.json
+- .gitignore
 ```
 
-## Types
+<!-- ## Types
 
 Use [TypeScript](https://www.typescriptlang.org).
 
@@ -120,6 +138,7 @@ Among other things, it'll help you easily generate [Documentation](#Documentatio
 > There's definitely stuff here from treatise on state we need to clarify
 
 > But beyond that we should also have stuff around the different kinds of UI state (Mike R.)
+ -->
 
 ## Styles
 
@@ -144,7 +163,7 @@ export const Button = ({ children, ...props }) => {
 };
 ```
 
-For how to allow style overrides, see [Composition](#Composition)
+<!-- For how to allow style overrides, see [Composition](#Composition)
 
 ### Why?
 
@@ -247,6 +266,7 @@ Overrides allow users to make targeted changes without inheriting complexity
 # Analytics
 
 Components exist in a hierarchy. Capture the context of where events are called down through the hierarchy using decorators, then bubble events up to listener components that wrap around the application.
+ -->
 
 # Publishing and Versioning
 
@@ -267,10 +287,11 @@ Tools like kaelig's 'Splash' are a good example of this.
 
 > [monorepo style guide](#)
 
-# Definition of Done
+# Component Usage
 
-> We should recommend (some derividation of) Emma Wedekind's Component Checklist here.
+<!-- > We should recommend (some derividation of) Emma Wedekind's Component Checklist here.
 > https://twitter.com/EmmaWedekind/status/1177248937763311617?s=20
+ -->
 
 ## Design
 
