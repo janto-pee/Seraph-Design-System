@@ -146,7 +146,6 @@ Button component has a list of predefined styles that can be defined using variu
 Button component has a different types depending on intended action. type could be reset or submit.
 
 - type-reset returns to an initial state.
-
 - type-submit for submittion.
 
 ```
