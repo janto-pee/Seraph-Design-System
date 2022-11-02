@@ -123,173 +123,6 @@ We also recognise functional building blocks and controllers that are used by co
 - .gitignore
 ```
 
-<!-- ## Types
-
-Use [TypeScript](https://www.typescriptlang.org).
-
-Among other things, it'll help you easily generate [Documentation](#Documentation) for your component APIs.
-
-## API Design
-
-## State Management
-
-> needs content from @jedwatson and @simonswiss.
-
-> There's definitely stuff here from treatise on state we need to clarify
-
-> But beyond that we should also have stuff around the different kinds of UI state (Mike R.)
- -->
-
-<!-- ## Styles
-
-Use [emotion](https://emotion.sh/) with the [css prop](https://emotion.sh/docs/css-prop).
-
-Specify styles in a function that is invoked with the current state of the component and design tokens, and return a css object:
-
-```js
-const getButtonStyles = ({ isPressed, tokens }) => ({
-  background: isPressed ? "blue" : "white",
-  text: !isPressed ? "blue" : "white",
-});
-
-export const Button = ({ children, ...props }) => {
-  const { isPressed, events } = useButton(props);
-  const styles = getButtonStyles({ isPressed });
-  return (
-    <button {...props} {...events}>
-      {children}
-    </button>
-  );
-}; -->
-
-````
-
-<!-- For how to allow style overrides, see [Composition](#Composition)
-
-### Why?
-
-Emotion gives us several benefits over other approaches:
-
-- Styles can be composed directly, without introducing the need for additional components
-- Dynamic styles (and the props or state they are based on) can easily be codified in the `getStyles()` function
-- Automatic SSR support with no additional server or build configuration required (this is important when publishing packages to npm that should have no understanding of where or how they may be used)
-
-> Performance notes?
-
-> Best practice for structuring styles in react.
-
-## Accessibility
-
-> Resources for best practices around accessibility
-> https://www.wuhcag.com/wcag-checklist/ > https://inclusive-components.design/ > https://www.udacity.com/course/web-accessibility--ud891 > https://a11yproject.com
-
-> Dom to provide (?)
-
-## Composition
-
-### Props
-
-> reflected attributes as props
-> props best practices
-
-### Types of Components
-
-When thinking about composition in a design system, it's helpful to break down the components in your design system into the following types:
-_Note that a package in the design system may include one or multiple components, of the following types. Not all components in a package must be exported._
-
-- **Elements**
-  - design system components that do not have internally managed state that reflect styles and attributes onto a dom element.
-- **Primitives**
-  - design system components that do have internally managed state generally only consist of one primary identifiable component.
-- **Compound Components**
-  - design system components that consist of multiple primitives.
-- **Composite Components**
-  - components comprised of multiple components some of which are published elsewhere in the design system.
-
-The term "stateful", as applied to components, may mean state that is managed internally by the component or accepted as props.
-
-### Spreading props and attributes into Views
-
-Prop spreading is a amenable pattern if there is only one primary dom element.
-Prop spreading is not as fine if you have multiple meaningful dom elements in your component. In these situations it is best to have a more targeted strategy for passing attributes and props down to key elements ([see overrides](#Overrides)).
-<!--
-### Wrapper Components
-
-Wrap components to add features, rather than blowing out the complexity of your low-level components, and their increasing API/prop surface area.
-
-For example, if your basic button takes an `isPressed` prop, and you want to add a toggle button to your design system, you can achieve the effect by creating a wrapping component that manages the toggle state:
-
-```js
-const ToggleButton = (props) => {
-  const [toggled, setToggled] = useState(false);
-  const handleClick = (e) => {
-    props.onToggle && props.onToggle(e, !toggled);
-    setToggled(!toggled);
-  };
-  return <Button {...props} isPressed={toggled} onClick={handleClick} />;
-};
-````
-
-<!-- This works best when your building-block components accept semantic and granular props with a well thought out API that closely reflects the state(s) the component can be in.
-
-#### Counterpoints
-
-This can get complex if you want to compose multiple components together.
-
-### Render Props
-
-Render props allow us to take control over the key state, attributes and styles of a particular component, while giving the user ownership over the shape of the DOM.
- -->
-
-```js
-const Modal = () => ()
-export default () => (
-  <Modal>
-    {({ styles, props, containerRef )) => (
-      <div ref={containerRef} css={styles} {...props}>
-        ...
-      </div>
-    )}
-  </Modal>
-)
-```
-
-<!--
-### Overrides
-
-Overrides allow users to make targeted changes without inheriting complexity
-
-- [Overrides / Flex / Extends] are meant for customisation that fall in the 20% case (advanced usage):
-- cssFn for customizing the CSS APPLICATION within a component
-- more explicit control over how tokens are applied
-  _ i.e. setState in react (either a config object or a more explicit function that is passed previous state)
-  _ for example spacing token used in padding instead of margin \* feedback loop with documented 80% case
-- A way for users to make stylistic changes that aren’t currently exposed as part of the theming / tokens API
-
-# Analytics
-
-Components exist in a hierarchy. Capture the context of where events are called down through the hierarchy using decorators, then bubble events up to listener components that wrap around the application.
- -->
-
-<!-- # Publishing and Versioning
-
-> See [monorepo style guide](https://github.com/Seraph/monorepo)
-
-# Observability
-
-> The yardstick of how understandable a system is tends to be how observable it is. - Cindy Sridharan
-
-The longevity of a design system is hinged on how understandable it is.
-As such, building tools and creating processes to make our design systems more understandable is incredibly important.
-
-Tools like kaelig's 'Splash' are a good example of this.
-
-> See https://twitter.com/kaelig/status/1172579203893456896
-
-# Documentation
-
-> [monorepo style guide](#) -->
-
 # Component Usage
 
 ### Button
@@ -301,9 +134,13 @@ Tools like kaelig's 'Splash' are a good example of this.
 Button component has a list of predefined styles that can be defined using varius css properties.
 
 bg-primary represent a primary action.
+
 bg-success represent a successful action.
+
 bg-info represent an informative action.
+
 bg-warning Used to show caution.
+
 bg-danger represent disapproval.
 
 ```
