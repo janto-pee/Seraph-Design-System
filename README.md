@@ -140,7 +140,7 @@ Among other things, it'll help you easily generate [Documentation](#Documentatio
 > But beyond that we should also have stuff around the different kinds of UI state (Mike R.)
  -->
 
-## Styles
+<!-- ## Styles
 
 Use [emotion](https://emotion.sh/) with the [css prop](https://emotion.sh/docs/css-prop).
 
@@ -160,8 +160,9 @@ export const Button = ({ children, ...props }) => {
       {children}
     </button>
   );
-};
-```
+}; -->
+
+````
 
 <!-- For how to allow style overrides, see [Composition](#Composition)
 
@@ -211,7 +212,7 @@ The term "stateful", as applied to components, may mean state that is managed in
 
 Prop spreading is a amenable pattern if there is only one primary dom element.
 Prop spreading is not as fine if you have multiple meaningful dom elements in your component. In these situations it is best to have a more targeted strategy for passing attributes and props down to key elements ([see overrides](#Overrides)).
-
+<!--
 ### Wrapper Components
 
 Wrap components to add features, rather than blowing out the complexity of your low-level components, and their increasing API/prop surface area.
@@ -227,9 +228,9 @@ const ToggleButton = (props) => {
   };
   return <Button {...props} isPressed={toggled} onClick={handleClick} />;
 };
-```
+````
 
-This works best when your building-block components accept semantic and granular props with a well thought out API that closely reflects the state(s) the component can be in.
+<!-- This works best when your building-block components accept semantic and granular props with a well thought out API that closely reflects the state(s) the component can be in.
 
 #### Counterpoints
 
@@ -238,6 +239,7 @@ This can get complex if you want to compose multiple components together.
 ### Render Props
 
 Render props allow us to take control over the key state, attributes and styles of a particular component, while giving the user ownership over the shape of the DOM.
+ -->
 
 ```js
 const Modal = () => ()
@@ -252,6 +254,7 @@ export default () => (
 )
 ```
 
+<!--
 ### Overrides
 
 Overrides allow users to make targeted changes without inheriting complexity
@@ -268,7 +271,7 @@ Overrides allow users to make targeted changes without inheriting complexity
 Components exist in a hierarchy. Capture the context of where events are called down through the hierarchy using decorators, then bubble events up to listener components that wrap around the application.
  -->
 
-# Publishing and Versioning
+<!-- # Publishing and Versioning
 
 > See [monorepo style guide](https://github.com/Seraph/monorepo)
 
@@ -285,13 +288,70 @@ Tools like kaelig's 'Splash' are a good example of this.
 
 # Documentation
 
-> [monorepo style guide](#)
+> [monorepo style guide](#) -->
 
 # Component Usage
 
-<!-- > We should recommend (some derividation of) Emma Wedekind's Component Checklist here.
-> https://twitter.com/EmmaWedekind/status/1177248937763311617?s=20
- -->
+### Button
+
+```
+<Button bg='primary' text='Click Me' />
+```
+
+Button component has a list of predefined styles that can be defined using varius css properties.
+
+bg-primary represent a primary action.
+bg-success represent a successful action.
+bg-info represent an informative action.
+bg-warning Used to show caution.
+bg-danger represent disapproval.
+
+```
+<Button type='submit' text='Submit' />
+```
+
+Button component has a different types depending on intended action. type could be reset or submit.
+
+type-reset returns to an initial state.
+type-submit for submittion.
+
+```
+<Button btnStyle='round' text='Submit' />
+```
+
+Button component could be rounded, flat or a simple link
+
+btn-round returns to an initial state.
+btn-flat for submittion.
+btn-link for submittion.
+
+### Alert Message
+
+```
+<AlertMessage icon={aitimes} alert="danger" message="Error 404, the web page you requested is not found" >
+```
+
+Alert Message component has a list of predefined styles that can be defined using varius css properties.
+
+alert-primary to display a basic message.
+alert-success represent a positive feedback.
+alert-info present an information.
+alert-warning Used to show caution.
+alert-danger represent disapproved result.
+
+```
+<AlertMessage
+        alertClass='outline'
+        icon={aitimes}
+        alert="danger"
+        message="Error 404, the web page you requested is not found"
+ />
+```
+
+Alert component has different classes depending on severity and variant. variant could be filled, outlined or text.
+
+class-filled has a deeper tone.
+class-outlined has a light tone.
 
 ## Design
 
