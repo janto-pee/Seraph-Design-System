@@ -133,15 +133,11 @@ We also recognise functional building blocks and controllers that are used by co
 
 Button component has a list of predefined styles that can be defined using varius css properties.
 
-bg-primary represent a primary action.
-
-bg-success represent a successful action.
-
-bg-info represent an informative action.
-
-bg-warning Used to show caution.
-
-bg-danger represent disapproval.
+- bg-primary represent a primary action.
+- bg-success represent a successful action.
+- bg-info represent an informative action.
+- bg-warning Used to show caution.
+- bg-danger represent disapproval.
 
 ```
 <Button type='submit' text='Submit' />
@@ -149,9 +145,9 @@ bg-danger represent disapproval.
 
 Button component has a different types depending on intended action. type could be reset or submit.
 
-type-reset returns to an initial state.
+- type-reset returns to an initial state.
 
-type-submit for submittion.
+- type-submit for submittion.
 
 ```
 <Button btnStyle='round' text='Submit' />
@@ -159,11 +155,9 @@ type-submit for submittion.
 
 Button component could be rounded, flat or a simple link
 
-btn-round returns to an initial state.
-
-btn-flat for submittion.
-
-btn-link for submittion.
+- btn-round returns to an initial state.
+- btn-flat for submittion.
+- btn-link for submittion.
 
 ### Alert Message
 
@@ -177,15 +171,11 @@ btn-link for submittion.
 
 Alert Message component has a list of predefined styles that can be defined using varius css properties.
 
-alert-primary to display a basic message.
-
-alert-success represent a positive feedback.
-
-alert-info present an information.
-
-alert-warning Used to show caution.
-
-alert-danger represent disapproved result.
+- alert-primary to display a basic message.
+- alert-success represent a positive feedback.
+- alert-info present an information.
+- alert-warning Used to show caution.
+- alert-danger represent disapproved result.
 
 ```
 <AlertMessage
@@ -198,9 +188,8 @@ alert-danger represent disapproved result.
 
 Alert component has different classes depending on severity and variant. variant could be filled, outlined or text.
 
-class-filled has a deeper tone.
-
-class-outlined has a light tone.
+- class-filled has a deeper tone.
+- class-outlined has a light tone.
 
 ## Design
 
