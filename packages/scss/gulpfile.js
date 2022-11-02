@@ -3,13 +3,13 @@ const sass = require("gulp-sass")(require("sass"));
 
 gulp.task("styles", () => {
   return gulp
-    .src("./src/global.scss")
+    .src("./src/**/*.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest("lib"));
 });
 
 gulp.task("watch", () => {
-  gulp.watch("sass/**/*.scss", (done) => {
+  gulp.watch("src/**/*.scss", (done) => {
     gulp.series(["clean", "styles"]);
   });
 });

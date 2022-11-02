@@ -45,6 +45,7 @@
 /* Font sizes */
 /* Heading font sizes */
 /* Font weights */
+/* Text- Allignment */
 /*=====  End of Typography  ======*/
 /*=============================================
 =            Breakpoints                      =
@@ -550,4 +551,10 @@ template {
   --shde-h4-font-weight: 400;
   --shde-h5-font-weight: 400;
   --shde-h6-font-weight: 300;
+  --shde-text-left: text-left;
+  --shde-text-center: text-center;
+  --shde-text-right: text-right;
+  --shde-text-justify: text-justify;
+  --shde-text-start: text-start;
+  --shde-text-end: text-end;
 }

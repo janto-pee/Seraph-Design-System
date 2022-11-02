@@ -1,0 +1,10 @@
+@import "../foundation/all";
+
+@each $x, $y in $spacing {
+  .shde-width-#{$x} {
+    width: $y;
+  }
+  .shde-height-#{$x} {
+    height: $y;
+  }
+}

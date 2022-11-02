@@ -1,7 +1,20 @@
 @import "../foundation/all";
 
-.shde-button-style {
-  background: $blue;
-  color: $white;
+.shde-button-container {
+  border: none;
+  color: $btn-primary-color;
+  background-color: $btn-primary-bg;
   padding: map-get($spacing, "sm");
+  text-align: $text-left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: $body-font-size;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: #4caf50;
+    color: white;
+  }
 }
