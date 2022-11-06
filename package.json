@@ -6,6 +6,10 @@
   "author": "Ayobami Adejumo <ayobami_adejumo@yahoo.com>",
   "license": "MIT",
   "private": "true",
+  "scripts": {
+    "build": "yarn lerna run build",
+    "dev": "yarn lerna run dev"
+  },
   "workspaces": {
     "packages": [
       "packages/**",
